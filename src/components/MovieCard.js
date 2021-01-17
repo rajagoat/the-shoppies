@@ -1,22 +1,30 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './Cards.css';
 
-const API_KEY = 'da1f5ac0';
-
-function MovieCard(props) {
+function MovieCard({Title, Poster, Type}) {
     return (
-        <>
+        <div>
             <li className='cards-item'>
                 <Link className='cards-item-link'>
-                    <figure className='cards-item-pick-wrap' data-category={props.label}>
-                        <img src='/' alt='Travel' className='cards-item-img'/>
-                    </figure>
-                    <div className='cards-item-info'>
-                        <h5 className='cards-item-text'>{props.text}</h5>
+                    <figure className='cards-item-pick-wrap'>
+                        <img 
+                            className='cards-item-img'
+                            src={Poster === 'N/A' ? 'https://placehold.it/198x264&text=Image+Not+Found' : Poster} 
+                            alt={Title}
+                        />
+                        <div>
+                            <h1>{Title}</h1>
+                        <meta
+                            className='cards-item-info'
+                            title={Title}
+                            description={false}
+                        />
                     </div>
+                    </figure>
                 </Link>
             </li>
-        </>
+        </div>
     )
 };
 
