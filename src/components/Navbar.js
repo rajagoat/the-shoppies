@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { MdMovieFilter } from 'react-icons/md';
 import { FaTimes, FaBars } from 'react-icons/fa';
+import './Navbar.css';
 
 function Navbar() {
     const [click, setClick] = useState(false);
@@ -13,11 +14,12 @@ function Navbar() {
         <>
             <nav className='navbar'>
                 <div className='navbar-container'>
-                    <Link to='/' className='navbar-logo'>
-                        THE SHOPPIES <MdMovieFilter />
+                    <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
+                        THE SHOPPIES
+                        <MdMovieFilter />
                   </Link>
                     <div className='menu-icon' onClick={handleClick}>
-                        {click ? <FaTimes/> : <FaBars/>}
+                        {click ? <FaTimes color='#fff' /> : <FaBars color='#fff' />}
                     </div>
                     <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                         <li className='nav-item'>
