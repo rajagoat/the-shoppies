@@ -1,7 +1,7 @@
 {
   "name": "the-shoppies",
   "version": "0.1.0",
-  "home": "http://the-shoppies-web.herokuapp.com/",
+  "home": "https://the-shoppies-web.herokuapp.com/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.9",
