@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import MovieCard from './MovieCard';
-import './Cards.css';
 import ReactLoading from 'react-loading';
 import SearchMovies from './SearchMovies';
 
@@ -36,24 +35,26 @@ function Cards() {
     }, [query]);
 
     return (
-        <div className='cards'>
+        <div>
             <h1>Check out these EPIC movies!</h1>
             <SearchMovies searchHandler={(setQuery)} />
-            <div className='cards-container'>
-                <div className='cards-wrapper'>
+            <div>
+                <div>
                     {loading && <ReactLoading />}
                     {error !== null &&
                         <div style={{ margin: '20 px 0' }}>
                             <alert message={error} type='error' />
                         </div>
                     }
-                    <ul className='cards-items'>
-                        {data !== null && data.length > 0 && data.map((result, index) => (
+                    <ul>
+                        {data !== null && data.length > 0 ? data.map((result, index) => (
                             <MovieCard 
                                 key={index}
                                 {...result}
                             />
-                        ))}
+                        )) : (
+                            <p>Couldn't find any movies with that name.</p>
+                        )}
                     </ul>
                 </div>
             </div>
