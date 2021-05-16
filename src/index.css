@@ -1,13 +1,34 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'PT Sans', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.navbar {
+  font-weight: bold;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  margin: 0 auto;
+  padding: 15px 200px 15px 200px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.81) 7.29%, #000000 100%);
+  color: white;
+}
+
+.navbar h1 {
+  font-size: 48px;
+}
+
+.navbar .links {
+  margin-left: auto;
+  font-size: 24px;
+}
+
+.navbar .links.home {
+  grid-column: 3 / 4;
+}
+
+.navbar .links.nom {
+  grid-column: 4 / 5;
 }
