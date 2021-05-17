@@ -1,11 +1,11 @@
 import Navbar from "./Navbar";
-import Search from './Search';
+import Home from './Home';
 
 function App() {
   return (
     <div className="App">
       <Navbar />
-      <Search />
+      <Home />
     </div>
   );
 }

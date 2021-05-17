@@ -1,12 +1,24 @@
-const Search = () => {
-    const [movie, setMovie] = useState('Star Wars');
+import { useEffect } from 'react';
+
+const Search = ({setMovie}) => {
+
+    useEffect(() => {
+        const value = document.querySelector('div > form > input');
+        value.setAttribute('size', value.getAttribute('placeholder').length);
+    }, []);
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setMovie(e.target[0].value);
+        console.log(e.target[0].value);
+    }
 
     return (
-        <div className="create">
-            <form>
+        <div className="search">
+            <form onSubmit={handleSubmit}>
                 <input
                     type="text"
-                    placeholder={`Search for any movie (ex: ${movie}`}
+                    placeholder={`Search for any movie (ex: Star Wars)`}
                 />
                 <button>Search</button>
             </form>

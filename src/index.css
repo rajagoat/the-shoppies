@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
-
 * {
   margin: 0;
   font-family: 'PT Sans', sans-serif;
@@ -31,4 +30,49 @@
 
 .navbar .links.nom {
   grid-column: 4 / 5;
+}
+
+.home {
+  text-align: center;
+}
+
+.home h2 {
+  font-size: 48px;
+  margin: 10px;
+  padding: 10px;
+}
+
+.search input {
+  padding: 24px 24px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  font-size: 20px;
+  background-color: #f2f4f8;
+  border-radius: 12px;
+  margin-right: 16px;
+}
+
+.search input::placeholder {
+  color: black;
+  opacity: 1;
+  /* Firefox */
+}
+
+.search input:focus {
+  border: 2px solid black;
+  outline: none;
+}
+
+.search button {
+  font-size: 20px;
+  padding: 24px 24px;
+  border-radius: 12px;
+  border-width: 0px;
+  color: white;
+  background-color: black;
+  cursor: pointer;
+}
+
+.search button:hover {
+  background-color: #000000dc;
 }
