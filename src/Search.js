@@ -19,6 +19,7 @@ const Search = ({setMovie}) => {
                 <input
                     type="text"
                     placeholder={`Search for any movie (ex: Star Wars)`}
+                    required
                 />
                 <button>Search</button>
             </form>

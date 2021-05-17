@@ -11,9 +11,6 @@ const Home = () => {
             <h2>Find and nominate your favourite movies <br /> for the annual Shoppies!</h2>
             <Search setMovie={setMovie} />
             <CardList movie={movie} />
-            <div className="cards">
-                
-            </div>
         </div>
     );
 }

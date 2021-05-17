@@ -24,7 +24,7 @@ const CardList = ({ movie }) => {
     }, [data])
 
     return (
-        <div className="card-list">
+        <ul className="card-list">
             {isPending && <div>Loading...</div>}
             {data && data.Search.map((movie) => (
                 <li className="card" key={`${movie.imdbID}`}>
@@ -35,7 +35,7 @@ const CardList = ({ movie }) => {
                     </div>
                 </li>
             ))}
-        </div>
+        </ul>
     );
 }
 
