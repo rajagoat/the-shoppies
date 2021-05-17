@@ -10,7 +10,7 @@ const Search = ({setMovie}) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         setMovie(e.target[0].value);
-        console.log(e.target[0].value);
+        // console.log(e.target[0].value);
     }
 
     return (
