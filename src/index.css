@@ -82,6 +82,8 @@
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   row-gap: 15px;
+  align-items: center; /* vertically centers */
+  justify-items: center; /* horizontally centers */
 }
 
 .card {
