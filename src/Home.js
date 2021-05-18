@@ -13,7 +13,7 @@ const Home = () => {
         <div className="home">
             <h2>Find and nominate your favourite movies <br /> for the annual Shoppies!</h2>
             <Search setMovie={setMovie} />
-            <Modal showModal={showModal} id={id}/>
+            <Modal showModal={showModal} setShowModal={setShowModal} id={id}/>
             <CardList movie={movie} setShowModal={setShowModal} setId={setId}/>
         </div>
     );
