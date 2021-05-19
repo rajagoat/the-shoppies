@@ -168,7 +168,7 @@
 .modal .data .info {
   align-self: flex-start;
   min-width: 540px;
-  max-width: 90%;
+  max-width: 92%;
   max-height: 430px;
   overflow-y: auto;
   margin-bottom: 10px;
@@ -199,7 +199,7 @@
 
 .modal .data h3 {
   font-size: 30px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .modal .data p:not(.genre, .more-details-info>p) {

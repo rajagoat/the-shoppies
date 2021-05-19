@@ -16,8 +16,8 @@ const Modal = ({ showModal, setShowModal, id, setId }) => {
     const API = `http://www.omdbapi.com/?i=${id}&apikey=da1f5ac0&plot=short`;
     // console.log(API);
     const { data, isPending } = useFetch(API);
-    /* if (data != null) {
-        console.log(data);
+    /* if (isPending != null) {
+        console.log(isPending);
     } */
 
     const [ShowDetails, setShowDetails] = useState(false);
@@ -101,7 +101,7 @@ const Modal = ({ showModal, setShowModal, id, setId }) => {
                             <div className="info">
                                 <h3 className="title-modal">{data.Title}</h3>
                                 <p><b>Actors: </b>{data.Actors}</p>
-                                <p className="plot"><b>Plot: </b>{data.Plot}</p>
+                                <p className="plot"><b>Plot Summary: </b>{data.Plot}</p>
                                 {!ShowDetails && (
                                     <div className="less-details" onClick={() => setShowDetails(true)}>
                                         <img className="closed" src={closedIcon} alt="Closed Icon" />
