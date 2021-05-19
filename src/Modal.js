@@ -3,6 +3,8 @@ import NA from './img/NA.svg';
 import { motion, AnimatePresence } from 'framer-motion';
 import useFetch from './useFetch';
 import exitIcon from './img/exit-icon.svg';
+import closedIcon from './img/closed-icon.svg';
+import openIcon from './img/open-icon.svg';
 import { useEffect } from 'react';
 
 const backdrop = {
@@ -96,6 +98,10 @@ const Modal = ({ showModal, setShowModal, id, setId }) => {
                                 <h3 className="title-modal">{data.Title}</h3>
                                 <p><b>Actors: </b>{data.Actors}</p>
                                 <p className="plot"><b>Plot: </b>{data.Plot}</p>
+                                <div className="more-details">
+                                    <img className="closed" src={closedIcon} alt="Closed Icon" />
+                                    <h4>More Details</h4>
+                                </div>
                             </div>
                             <button>NOMINATE</button>
                         </div>
