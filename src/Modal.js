@@ -5,7 +5,7 @@ import useFetch from './useFetch';
 import exitIcon from './img/exit-icon.svg';
 import closedIcon from './img/closed-icon.svg';
 import openIcon from './img/open-icon.svg';
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 const backdrop = {
     visible: { opacity: 1 },
@@ -19,6 +19,8 @@ const Modal = ({ showModal, setShowModal, id, setId }) => {
     /* if (data != null) {
         console.log(data);
     } */
+
+    const [ShowDetails, setShowDetails] = useState(false);
 
     if (data != null) {
         const img = document.querySelector('.poster');
@@ -70,6 +72,7 @@ const Modal = ({ showModal, setShowModal, id, setId }) => {
         if (e.target === document.querySelector('div.backdrop') || e.target === document.querySelector('img.exit')) {
             setShowModal(false);
             setId('');
+            setShowDetails(false);
         }
     };
 
@@ -77,6 +80,7 @@ const Modal = ({ showModal, setShowModal, id, setId }) => {
         if (showModal && e.key === 'Escape') {
             setShowModal(false);
             setId('');
+            setShowDetails(false);
         }
     });
 
@@ -98,10 +102,32 @@ const Modal = ({ showModal, setShowModal, id, setId }) => {
                                 <h3 className="title-modal">{data.Title}</h3>
                                 <p><b>Actors: </b>{data.Actors}</p>
                                 <p className="plot"><b>Plot: </b>{data.Plot}</p>
-                                <div className="more-details">
-                                    <img className="closed" src={closedIcon} alt="Closed Icon" />
-                                    <h4>More Details</h4>
-                                </div>
+                                {!ShowDetails && (
+                                    <div className="less-details" onClick={() => setShowDetails(true)}>
+                                        <img className="closed" src={closedIcon} alt="Closed Icon" />
+                                        <h4>More Details</h4>
+                                    </div>
+                                )}
+                                {ShowDetails && (
+                                    <div>
+                                        <div className="more-details" onClick={() => setShowDetails(false)}>
+                                            <img className="open" src={openIcon} alt="Open Icon" />
+                                            <h4>Less Details</h4>
+
+                                        </div>
+                                        <div className="more-details-info" >
+                                            <p>Rated: {data.Rated}</p>
+                                            <p>Released: {data.Released}</p>
+                                            <p>Runtime: {data.Runtime}</p>
+                                            <p>Produced by: {data.Production}</p>
+                                            <p>Director(s): {data.Director}</p>
+                                            <p>Writer(s): {data.Writer}</p>
+                                            <p>Actor(s): {data.Actors}</p>
+                                            <p>Language: {data.Language}</p>
+                                            <p>Country: {data.Country}</p>
+                                        </div>
+                                    </div>
+                                )}
                             </div>
                             <button>NOMINATE</button>
                         </div>

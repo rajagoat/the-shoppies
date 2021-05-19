@@ -151,14 +151,16 @@
 
 .modal .data {
   display: grid;
-  /* grid-template-rows: 20% 50% 30%; */
+  grid-template-rows: 10% 70% 20%;
   align-items: center;
   justify-items: start;
   text-align: left;
 }
 
 .modal .data .exit {
+  align-self: flex-start;
   justify-self: end;
+  margin-top: 5px;
   margin-right: 5px;
   cursor: pointer;
 }
@@ -166,9 +168,32 @@
 .modal .data .info {
   align-self: flex-start;
   max-width: 90%;
-  max-height: 530px;
+  max-height: 430px;
   overflow-y: auto;
   margin-bottom: 10px;
+}
+
+.modal .data .info::-webkit-scrollbar {
+  width: 8px; /* 1px wider than Lion. */
+  /* This is more usable for users trying to click it. */
+  background-color: rgba(0,0,0,0);
+  border-radius: 100px;
+}
+/* hover effect for both scrollbar area, and scrollbar 'thumb' */
+.modal .data .info::-webkit-scrollbar:hover {
+  background-color: rgba(0, 0, 0, 0.09);
+}
+
+/* The scrollbar 'thumb' ...that marque oval shape in a scrollbar */
+.modal .data .info::-webkit-scrollbar-thumb:vertical {
+  /* This is the EXACT color of Mac OS scrollbars. 
+     Yes, I pulled out digital color meter */
+  background: rgba(0,0,0,0.5);
+  border-radius: 100px;
+}
+.modal .data .info::-webkit-scrollbar-thumb:vertical:active {
+  background: rgba(0,0,0,0.61); /* Some darker color when you click it */
+  border-radius: 100px;
 }
 
 .modal .data h3 {
@@ -209,21 +234,26 @@
   border-radius: 3px;
 }
 
-.more-details {
+.less-details, .more-details {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   background-color: #d5d5d5;
   cursor: pointer;
+  user-select: none;
 }
 
-.closed {
+.closed, .open {
   justify-self: start;
 }
 
-.more-details>h4 {
+.less-details h4, .more-details h4 {
   justify-self: end;
   font-weight: lighter;
   font-size: 25px;
   margin-right: 10px;
+}
+
+.more-details-info > p {
+  max-width: 99%;
 }
