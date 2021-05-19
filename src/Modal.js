@@ -71,6 +71,13 @@ const Modal = ({ showModal, setShowModal, id, setId }) => {
         }
     };
 
+    document.addEventListener('keydown', (e) => {
+        if (showModal && e.key === 'Escape') {
+            setShowModal(false);
+            setId('');
+        }
+    });
+
     return (
         <AnimatePresence exitBeforeEnter>
             { showModal && (
