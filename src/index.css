@@ -243,6 +243,10 @@
   border-radius: 3px;
 }
 
+.actors, .plot {
+  padding-right: 10px;
+}
+
 .less-details, .more-details {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

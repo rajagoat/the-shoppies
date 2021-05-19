@@ -100,7 +100,7 @@ const Modal = ({ showModal, setShowModal, id, setId }) => {
                             <img className="exit" src={exitIcon} alt="Exit Icon" onClick={(e) => handleClick(e)} />
                             <div className="info">
                                 <h3 className="title-modal">{data.Title}</h3>
-                                <p><b>Actors: </b>{data.Actors}</p>
+                                <p className="actors"><b>Actors: </b>{data.Actors}</p>
                                 <p className="plot"><b>Plot Summary: </b>{data.Plot}</p>
                                 {!ShowDetails && (
                                     <div className="less-details" onClick={() => setShowDetails(true)}>
