@@ -173,28 +173,35 @@
   max-height: 430px;
   overflow-y: auto;
   margin-bottom: 10px;
+  padding-right: 2px;
 }
 
 .modal .data .info::-webkit-scrollbar {
-  width: 8px; /* 1px wider than Lion. */
+  width: 8px;
+  /* 1px wider than Lion. */
   /* This is more usable for users trying to click it. */
-  background-color: rgba(0,0,0,0);
+  background-color: rgba(0, 0, 0, 0);
   border-radius: 100px;
 }
+
 /* hover effect for both scrollbar area, and scrollbar 'thumb' */
+
 .modal .data .info::-webkit-scrollbar:hover {
   background-color: rgba(0, 0, 0, 0.09);
 }
 
 /* The scrollbar 'thumb' ...that marque oval shape in a scrollbar */
+
 .modal .data .info::-webkit-scrollbar-thumb:vertical {
   /* This is the EXACT color of Mac OS scrollbars. 
      Yes, I pulled out digital color meter */
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   border-radius: 100px;
 }
+
 .modal .data .info::-webkit-scrollbar-thumb:vertical:active {
-  background: rgba(0,0,0,0.61); /* Some darker color when you click it */
+  background: rgba(0, 0, 0, 0.61);
+  /* Some darker color when you click it */
   border-radius: 100px;
 }
 
@@ -244,6 +251,7 @@
   cursor: pointer;
   user-select: none;
   border-radius: 5px;
+  max-width: 670px;
 }
 
 .more-details {
@@ -264,12 +272,13 @@
 }
 
 .more-details-info {
+  max-width: 670px;
   border-radius: 0px 0px 5px 5px;
   border: 1px solid black;
   border-top: 0;
 }
 
-.more-details-info > p {
+.more-details-info>p {
   padding-left: 5px;
   max-width: 98%;
   padding-top: 5px;
