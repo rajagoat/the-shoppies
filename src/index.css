@@ -174,9 +174,10 @@
 
 .modal .data h3 {
   font-size: 30px;
+  margin-bottom: 5px;
 }
 
-.modal .data p {
+.modal .data p:not(.genre) {
   font-size: 18px;
   margin: 20px 0px;
 }
@@ -196,4 +197,13 @@
 
 .modal .data button:hover {
   background-color: #000000dc;
+}
+
+.genre {
+  display: inline;
+  margin-right: 10px;
+  padding: 0px 5px;
+  border: solid 1px black;
+  color: white;
+  background-color: #0c1f3696;
 }

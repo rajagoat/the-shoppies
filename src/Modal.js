@@ -58,11 +58,18 @@ const Modal = ({ showModal, setShowModal, id, setId }) => {
             genreTags.forEach(tag => {
                 if (genre.includes(tag)) {
                     // console.log(`<p>${tag}</p>`);
-                    content.insertAdjacentHTML('afterend', `<p>${tag}</p>`);
+                    content.insertAdjacentHTML('afterend', `<p class="genre">${tag}</p>`);
                 }
             });
         }
     }, [data]);
+
+    const handleClick = e => {
+        if (e.target === document.querySelector('div.backdrop') || e.target === document.querySelector('img.exit')) {
+            setShowModal(false);
+            setId('');
+        }
+    };
 
     return (
         <AnimatePresence exitBeforeEnter>
@@ -71,15 +78,13 @@ const Modal = ({ showModal, setShowModal, id, setId }) => {
                     variants={backdrop}
                     initial="hidden"
                     animate="visible"
+                    onClick={(e) => handleClick(e)}
                 >
                     {isPending && <div>Loading...</div>}
                     {data && <motion.div className="modal">
                         <img className="poster" src={data.Poster} alt="Movie Poster" />
                         <div className="data">
-                            <img src={exitIcon} alt="Exit Icon" onClick={() => {
-                                setShowModal(false)
-                                setId('');
-                            }} />
+                            <img className="exit" src={exitIcon} alt="Exit Icon" onClick={(e) => handleClick(e)} />
                             <div className="info">
                                 <h3 className="title-modal">{data.Title}</h3>
                                 <p><b>Actors: </b>{data.Actors}</p>
