@@ -8,11 +8,6 @@ const Home = () => {
     const [movie, setMovie] = useState('Star Wars');
     const [showModal, setShowModal] = useState(false);
     const [id, setId] = useState('');
-
-    const icon = document.querySelector('.search input');
-    if (icon != null) {
-        console.log(icon.style);
-    }
     
     return (
         <div className="home">
