@@ -9,6 +9,11 @@ const Home = () => {
     const [showModal, setShowModal] = useState(false);
     const [id, setId] = useState('');
 
+    const icon = document.querySelector('.search input');
+    if (icon != null) {
+        console.log(icon.style);
+    }
+    
     return (
         <div className="home">
             <h2>Find and nominate your favourite movies <br /> for the annual Shoppies!</h2>

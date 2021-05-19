@@ -1,9 +1,9 @@
 import { useEffect } from 'react';
 
-const Search = ({setMovie}) => {
+const Search = ({ setMovie }) => {
 
     useEffect(() => {
-        const value = document.querySelector('div > form > input');
+        const value = document.querySelector('div > form input');
         value.setAttribute('size', value.getAttribute('placeholder').length);
     }, []);
 
@@ -16,11 +16,11 @@ const Search = ({setMovie}) => {
     return (
         <div className="search">
             <form onSubmit={handleSubmit}>
-                <input
-                    type="text"
-                    placeholder={`Search for any movie (ex: Star Wars)`}
-                    required
-                />
+                    <input
+                        type="text"
+                        placeholder={`Search for any movie (ex: Star Wars)`}
+                        required
+                    />
                 <button>Search</button>
             </form>
         </div>
