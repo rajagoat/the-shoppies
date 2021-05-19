@@ -22,7 +22,7 @@ const Modal = ({ showModal, setShowModal, id, setId }) => {
 
     const [ShowDetails, setShowDetails] = useState(false);
 
-    if (data != null) {
+    if (data !== null) {
         const img = document.querySelector('.poster');
         if (img !== null) {
             if (img.getAttribute('src') === 'N/A') {
