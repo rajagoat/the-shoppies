@@ -16,9 +16,9 @@ const useFetch = (url) => {
             // console.log(data);
         })
 
-    }, [url]);   
+    }, [url]);
 
     return { data, isPending };
 }
- 
+
 export default useFetch;
