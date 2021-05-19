@@ -15,6 +15,10 @@
   color: white;
 }
 
+.navbar img {
+  padding-top: 5px;
+}
+
 .navbar h1 {
   font-size: 48px;
 }
