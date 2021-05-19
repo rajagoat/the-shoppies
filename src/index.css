@@ -167,6 +167,7 @@
 
 .modal .data .info {
   align-self: flex-start;
+  min-width: 540px;
   max-width: 90%;
   max-height: 430px;
   overflow-y: auto;
@@ -201,7 +202,7 @@
   margin-bottom: 5px;
 }
 
-.modal .data p:not(.genre) {
+.modal .data p:not(.genre, .more-details-info>p) {
   font-size: 18px;
   margin: 20px 0px;
 }
@@ -241,6 +242,13 @@
   background-color: #d5d5d5;
   cursor: pointer;
   user-select: none;
+  border-radius: 5px;
+}
+
+.more-details {
+  border-radius: 5px 5px 0px 0px;
+  border: 1px solid black;
+  border-bottom: 0;
 }
 
 .closed, .open {
@@ -254,6 +262,15 @@
   margin-right: 10px;
 }
 
+.more-details-info {
+  border-radius: 0px 0px 5px 5px;
+  border: 1px solid black;
+  border-top: 0;
+}
+
 .more-details-info > p {
-  max-width: 99%;
+  padding-left: 5px;
+  max-width: 98%;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }

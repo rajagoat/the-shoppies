@@ -116,15 +116,14 @@ const Modal = ({ showModal, setShowModal, id, setId }) => {
 
                                         </div>
                                         <div className="more-details-info" >
-                                            <p>Rated: {data.Rated}</p>
-                                            <p>Released: {data.Released}</p>
-                                            <p>Runtime: {data.Runtime}</p>
-                                            <p>Produced by: {data.Production}</p>
-                                            <p>Director(s): {data.Director}</p>
-                                            <p>Writer(s): {data.Writer}</p>
-                                            <p>Actor(s): {data.Actors}</p>
-                                            <p>Language: {data.Language}</p>
-                                            <p>Country: {data.Country}</p>
+                                            <p><b>Rated:</b> {data.Rated}</p>
+                                            <p><b>Released:</b> {data.Released}</p>
+                                            <p><b>Runtime:</b> {data.Runtime}</p>
+                                            <p><b>Produced by:</b> {data.Production}</p>
+                                            <p><b>Director(s):</b> {data.Director}</p>
+                                            <p><b>Writer(s):</b> {data.Writer}</p>
+                                            <p><b>Language:</b> {data.Language}</p>
+                                            <p><b>Country:</b> {data.Country}</p>
                                         </div>
                                     </div>
                                 )}
