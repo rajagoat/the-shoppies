@@ -7,7 +7,7 @@ const CardList = ({ movie, setShowModal, setId }) => {
     const [page, setPage] = useState('1');
     const API = `http://www.omdbapi.com/?s=${movie}&apikey=da1f5ac0&type=movie&page=${page}`;
     // console.log(API);
-    const { data, isPending } = useFetch(API);
+    const { data } = useFetch(API);
     let idArray = [];
     if (data != null) {
         var maxPages = Math.ceil(data.totalResults / 10); // this has global scope
@@ -25,7 +25,7 @@ const CardList = ({ movie, setShowModal, setId }) => {
         }
     }, [data]);
 
-    const handleClick = id => {
+    const handleClick = (id) => {
         setShowModal(true);
         // console.log(id);
         setId(id);
@@ -34,7 +34,6 @@ const CardList = ({ movie, setShowModal, setId }) => {
     return (
         <div>
             <ul className="card-list">
-                {isPending && <div>Loading...</div>}
                 {data && data.Response === 'False' && <h1 className="no-results">No Results Found</h1>}
                 {data && data.Response !== 'False' && data.Search.map((movie) => {
                     // console.log(idArray);

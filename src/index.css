@@ -184,6 +184,7 @@
   overflow-y: auto;
   margin-bottom: 10px;
   padding-right: 2px;
+  padding-bottom: 5px;
 }
 
 .modal .data .info::-webkit-scrollbar {
@@ -312,10 +313,12 @@
 .previous-hidden, .next-hidden, .page-number {
   color: transparent;
   user-select: none;
+  pointer-events: none;
 }
 
 .main-page {
   font-size: 35px;
+  pointer-events: none;
 }
 
 .secondary-page {
@@ -324,4 +327,9 @@
 
 .previous, .next, .main-page, .secondary-page, .tertiary-page {
   cursor: pointer;
+}
+
+.loader-card-list {
+  justify-self: center;
+  grid-column: 3 / 4;
 }

@@ -6,6 +6,8 @@ import exitIcon from './img/exit-icon.svg';
 import closedIcon from './img/closed-icon.svg';
 import openIcon from './img/open-icon.svg';
 import { useState, useEffect } from 'react';
+import { usePromiseTracker } from 'react-promise-tracker';
+import Loading from './Loading';
 
 const backdrop = {
     visible: { opacity: 1 },
@@ -15,10 +17,8 @@ const backdrop = {
 const Modal = ({ showModal, setShowModal, id, setId }) => {
     const API = `http://www.omdbapi.com/?i=${id}&apikey=da1f5ac0&plot=short`;
     // console.log(API);
-    const { data, isPending } = useFetch(API);
-    /* if (isPending != null) {
-        console.log(isPending);
-    } */
+    const { data } = useFetch(API);
+    const { promiseInProgress } = usePromiseTracker();
 
     const [ShowDetails, setShowDetails] = useState(false);
 
@@ -93,8 +93,8 @@ const Modal = ({ showModal, setShowModal, id, setId }) => {
                     animate="visible"
                     onClick={(e) => handleClick(e)}
                 >
-                    {isPending && <div>Loading...</div>}
-                    {data && <motion.div className="modal">
+                    <Loading />
+                    {!promiseInProgress && data && <motion.div className="modal">
                         <img className="poster" src={data.Poster} alt="Movie Poster" />
                         <div className="data">
                             <img className="exit" src={exitIcon} alt="Exit Icon" onClick={(e) => handleClick(e)} />
