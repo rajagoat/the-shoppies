@@ -20,6 +20,7 @@ const Nominations = ({ nomData }) => {
         for (let i = 0; i < nomData.length; i++) {
             nomData.pop();
         }
+        localStorage.setItem('nominations', JSON.stringify(nomData));
         window.location.reload();
     }
 
