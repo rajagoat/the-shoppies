@@ -1,9 +1,10 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 const Pages = ({ maxPages, page, setPage, promiseInProgress }) => {
     // console.log(maxPages);
     let pages = [];
     // console.log(page);
+    const isFirstRender = useRef(true);
     for (let i = page - 2; i <= page + 2 && i <= maxPages + 2; i++) {
         if (i === -1) {
             pages.push('a');
@@ -36,7 +37,11 @@ const Pages = ({ maxPages, page, setPage, promiseInProgress }) => {
     });
 
     useEffect(() => {
-        window.scrollTo(0, 250);
+        if (isFirstRender.current) {
+            isFirstRender.current = false;
+        } else {
+            window.scrollTo(0, 250);
+        }
     }, [page]);
 
     const handleClick = (page) => {

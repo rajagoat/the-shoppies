@@ -7,16 +7,26 @@
 .navbar {
   font-weight: bold;
   display: grid;
-  grid-template-columns: 0.2fr 1fr 2.5fr 0.6fr;
+  grid-template-columns: 6% 44% 25% 25%;
   align-items: center;
   margin: 0 auto;
   padding: 15px 200px 15px 200px;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.81) 7.29%, #000000 100%);
-  color: white;
+  
 }
 
-.navbar img {
-  padding-top: 5px;
+.navbar .icon {
+  padding-top: 7px;
+  justify-self: center;
+}
+
+.navbar .logo {
+  max-width: fit-content;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
 }
 
 .navbar h1 {
@@ -240,7 +250,14 @@
   cursor: pointer;
 }
 
-.modal .data button:hover {
+.modal .data button.nominated {
+  color: black;
+  background-color: #d5d5d5;
+  cursor: auto;
+  border: 1px solid black;
+}
+
+.modal .data button:not(.nominated):hover {
   background-color: #000000dc;
 }
 
@@ -332,4 +349,45 @@
 .loader-card-list {
   justify-self: center;
   grid-column: 3 / 4;
+}
+
+.nominations {
+  padding: 50px;
+}
+
+.nominations-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin-top: 30px;
+  align-items: center;
+  justify-items: center;
+}
+
+.empty {
+  list-style-type: none;
+  padding: 250px 50px;
+  border: 1px solid;
+  border-radius: 10px;
+  background-color: #d5d5d5;
+}
+
+.empty h3 {
+  font-weight: lighter;
+}
+
+.nominations > button {
+  display: block;
+  margin: 0 auto;
+  margin-top: 55px;
+  padding: 10px 10px;
+  font-size: 30px;
+  border-radius: 10px;
+  border-width: 0px;
+  color: white;
+  background-color: black;
+  cursor: pointer;
+}
+
+.nominations button:hover {
+  background-color: #000000dc;
 }

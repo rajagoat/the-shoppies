@@ -53,7 +53,7 @@ const CardList = ({ movie, setShowModal, setId }) => {
                     }
                 })}
             </ul>
-            <Pages maxPages={maxPages} page={Number(page)} setPage={setPage} />
+            {data && <Pages maxPages={maxPages} page={Number(page)} setPage={setPage} />}
         </div>
     );
 }

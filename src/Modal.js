@@ -14,13 +14,14 @@ const backdrop = {
     hidden: { opacity: 0 }
 };
 
-const Modal = ({ showModal, setShowModal, id, setId }) => {
+const Modal = ({ showModal, setShowModal, id, setId, nomData }) => {
     const API = `http://www.omdbapi.com/?i=${id}&apikey=da1f5ac0&plot=short`;
     // console.log(API);
     const { data } = useFetch(API);
     const { promiseInProgress } = usePromiseTracker();
 
     const [ShowDetails, setShowDetails] = useState(false);
+    const [isNominated, setIsNominated] = useState(false);
 
     if (data !== null) {
         const img = document.querySelector('.poster');
@@ -30,6 +31,21 @@ const Modal = ({ showModal, setShowModal, id, setId }) => {
             }
         }
     }
+
+    useEffect(() => {
+        let found = false;
+        for (let i = 0; i < nomData.length; i++) {
+            if (nomData[i].imdbID === id) {
+                found = true;
+                break;
+            }
+        }
+        if (found) {
+            setIsNominated(true);
+        } else {
+            setIsNominated(false);
+        }
+    }, [id, nomData, data]);
 
     useEffect(() => {
         const content = document.querySelector('.title-modal');
@@ -84,6 +100,26 @@ const Modal = ({ showModal, setShowModal, id, setId }) => {
         }
     });
 
+    const Nom = () => {
+        if (nomData.length === 5) {
+            alert('Your nominations are full!');
+        } else {
+            nomData.push(data);
+            setIsNominated(true);
+        } 
+    }
+
+    const RemoveNom = () => {
+        for (let i = 0; i < nomData.length; i++) {
+            if (nomData[i].imdbID === id) {
+                var index = i;
+                break;
+            }
+        }
+        nomData.splice(index, 1);
+        setIsNominated(false);
+    }
+ 
     return (
         <AnimatePresence exitBeforeEnter>
             { showModal && (
@@ -128,7 +164,8 @@ const Modal = ({ showModal, setShowModal, id, setId }) => {
                                     </div>
                                 )}
                             </div>
-                            <button>NOMINATE</button>
+                            {!isNominated && <button onClick={() => Nom()}>NOMINATE</button>}
+                            {isNominated && <button className="nominated" onClick={() => RemoveNom()}>NOMINATED</button>}
                         </div>
                     </motion.div>}
                 </motion.div>

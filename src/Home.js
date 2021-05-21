@@ -3,7 +3,7 @@ import CardList from './CardList';
 import Modal from './Modal';
 import Search from "./Search"
 
-const Home = () => {
+const Home = ({nomData}) => {
     const [movie, setMovie] = useState('Star Wars');
     const [showModal, setShowModal] = useState(false);
     const [id, setId] = useState('');
@@ -17,6 +17,7 @@ const Home = () => {
                 setShowModal={setShowModal}
                 id={id}
                 setId={setId}
+                nomData={nomData}
             />
             <CardList
                 movie={movie}
