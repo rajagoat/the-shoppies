@@ -110,7 +110,8 @@
 
 .card {
   list-style-type: none;
-  max-width: 300px;
+  /* max-width: 300px; */
+  width: 90%;
   height: fit-content;
   border-radius: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -123,7 +124,8 @@
 }
 
 .card img {
-  max-width: 296px;
+  /* max-width: 296px; */
+  width: 100%;
   border-radius: 10px 10px 0px 0px;
   padding: 2px;
   display: table-cell;

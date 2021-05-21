@@ -19,7 +19,6 @@ const Modal = ({ showModal, setShowModal, id, setId, nomData }) => {
     // console.log(API);
     const { data } = useFetch(API);
     const { promiseInProgress } = usePromiseTracker();
-
     const [ShowDetails, setShowDetails] = useState(false);
     const [isNominated, setIsNominated] = useState(false);
 
@@ -105,6 +104,7 @@ const Modal = ({ showModal, setShowModal, id, setId, nomData }) => {
             alert('Your nominations are full!');
         } else {
             nomData.push(data);
+            localStorage.setItem('nominations', JSON.stringify(nomData));
             setIsNominated(true);
         } 
     }
@@ -117,6 +117,7 @@ const Modal = ({ showModal, setShowModal, id, setId, nomData }) => {
             }
         }
         nomData.splice(index, 1);
+        localStorage.setItem('nominations', JSON.stringify(nomData));
         setIsNominated(false);
     }
  

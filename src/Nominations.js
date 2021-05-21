@@ -4,7 +4,7 @@ import Modal from './Modal';
 const Nominations = ({ nomData }) => {
     const [showModal, setShowModal] = useState(false);
     const [id, setId] = useState('');
-
+    
     const emptyNoms = [];
     for (let i = nomData.length; i < 5; i++) {
         emptyNoms.push(i);
