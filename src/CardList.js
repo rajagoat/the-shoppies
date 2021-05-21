@@ -1,10 +1,9 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import useFetch from "./useFetch";
 import NA from './img/NA.svg';
 import Pages from "./Pages";
 
-const CardList = ({ movie, setShowModal, setId }) => {
-    const [page, setPage] = useState('1');
+const CardList = ({ movie, setShowModal, setId, page, setPage }) => {
     const API = `http://www.omdbapi.com/?s=${movie}&apikey=da1f5ac0&type=movie&page=${page}`;
     // console.log(API);
     const { data } = useFetch(API);
@@ -53,7 +52,7 @@ const CardList = ({ movie, setShowModal, setId }) => {
                     }
                 })}
             </ul>
-            {data && <Pages maxPages={maxPages} page={Number(page)} setPage={setPage} />}
+            {data && data.Response !== 'False' && <Pages maxPages={maxPages} page={Number(page)} setPage={setPage} />}
         </div>
     );
 }
