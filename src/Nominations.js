@@ -9,7 +9,6 @@ const Nominations = ({ nomData }) => {
     for (let i = nomData.length; i < 5; i++) {
         emptyNoms.push(i);
     }
-    console.log(emptyNoms);
 
     const handleClick = (id) => {
         setShowModal(true);
