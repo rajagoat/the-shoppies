@@ -29,15 +29,21 @@ const Search = ({ setMovie, page, setPage }) => {
         setMovie(e.target[0].value);
         // console.log(e.target[0].value);
         const mainPage = document.querySelector('.main-page');
-        mainPage.setAttribute('class', 'page-number');
+        if (mainPage !== null) {
+            mainPage.setAttribute('class', 'page-number');
+        }
         const secPages = document.querySelectorAll('.secondary-page');
-        secPages.forEach(secPage => {
-            secPage.setAttribute('class', 'page-number');
-        })
+        if (secPages !== null) {
+            secPages.forEach(secPage => {
+                secPage.setAttribute('class', 'page-number');
+            })
+        }
         const terPages = document.querySelectorAll('.tertiary-page');
-        terPages.forEach(terPage => {
-            terPage.setAttribute('class', 'page-number');
-        })
+        if (terPages !== null) {
+            terPages.forEach(terPage => {
+                terPage.setAttribute('class', 'page-number');
+            })
+        }
         setPage(1);
     }
 
