@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/the-shoppies/static/css/main.ba75a22d.chunk.css",
-    "main.js": "/the-shoppies/static/js/main.17c9c0a6.chunk.js",
-    "main.js.map": "/the-shoppies/static/js/main.17c9c0a6.chunk.js.map",
-    "runtime-main.js": "/the-shoppies/static/js/runtime-main.cb123c16.js",
-    "runtime-main.js.map": "/the-shoppies/static/js/runtime-main.cb123c16.js.map",
-    "static/js/2.ecd3b291.chunk.js": "/the-shoppies/static/js/2.ecd3b291.chunk.js",
-    "static/js/2.ecd3b291.chunk.js.map": "/the-shoppies/static/js/2.ecd3b291.chunk.js.map",
-    "index.html": "/the-shoppies/index.html",
-    "static/css/main.ba75a22d.chunk.css.map": "/the-shoppies/static/css/main.ba75a22d.chunk.css.map",
-    "static/js/2.ecd3b291.chunk.js.LICENSE.txt": "/the-shoppies/static/js/2.ecd3b291.chunk.js.LICENSE.txt",
-    "static/media/NA.aa2bf3da.svg": "/the-shoppies/static/media/NA.aa2bf3da.svg",
-    "static/media/closed-icon.9e2ec151.svg": "/the-shoppies/static/media/closed-icon.9e2ec151.svg",
-    "static/media/exit-icon.bf0343e8.svg": "/the-shoppies/static/media/exit-icon.bf0343e8.svg",
-    "static/media/movie-icon.07f4ac20.svg": "/the-shoppies/static/media/movie-icon.07f4ac20.svg",
-    "static/media/open-icon.bd14231d.svg": "/the-shoppies/static/media/open-icon.bd14231d.svg",
-    "static/media/index.css": "/the-shoppies/static/media/search-icon.5c7685a7.svg"
+    "main.css": "/static/css/main.55049f18.chunk.css",
+    "main.js": "/static/js/main.c3f9013c.chunk.js",
+    "main.js.map": "/static/js/main.c3f9013c.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.7d73e942.js",
+    "runtime-main.js.map": "/static/js/runtime-main.7d73e942.js.map",
+    "static/js/2.ecd3b291.chunk.js": "/static/js/2.ecd3b291.chunk.js",
+    "static/js/2.ecd3b291.chunk.js.map": "/static/js/2.ecd3b291.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.55049f18.chunk.css.map": "/static/css/main.55049f18.chunk.css.map",
+    "static/js/2.ecd3b291.chunk.js.LICENSE.txt": "/static/js/2.ecd3b291.chunk.js.LICENSE.txt",
+    "static/media/NA.aa2bf3da.svg": "/static/media/NA.aa2bf3da.svg",
+    "static/media/closed-icon.9e2ec151.svg": "/static/media/closed-icon.9e2ec151.svg",
+    "static/media/exit-icon.bf0343e8.svg": "/static/media/exit-icon.bf0343e8.svg",
+    "static/media/movie-icon.07f4ac20.svg": "/static/media/movie-icon.07f4ac20.svg",
+    "static/media/open-icon.bd14231d.svg": "/static/media/open-icon.bd14231d.svg",
+    "static/media/index.css": "/static/media/search-icon.5c7685a7.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.cb123c16.js",
+    "static/js/runtime-main.7d73e942.js",
     "static/js/2.ecd3b291.chunk.js",
-    "static/css/main.ba75a22d.chunk.css",
-    "static/js/main.17c9c0a6.chunk.js"
+    "static/css/main.55049f18.chunk.css",
+    "static/js/main.c3f9013c.chunk.js"
   ]
 }
