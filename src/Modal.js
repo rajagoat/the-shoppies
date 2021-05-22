@@ -15,7 +15,7 @@ const backdrop = {
 };
 
 const Modal = ({ showModal, setShowModal, id, setId, nomData }) => {
-    const API = `http://www.omdbapi.com/?i=${id}&apikey=da1f5ac0&plot=short`;
+    const API = `https://www.omdbapi.com/?i=${id}&apikey=da1f5ac0&plot=short`;
     // console.log(API);
     const { data } = useFetch(API);
     const { promiseInProgress } = usePromiseTracker();
