@@ -1,6 +1,6 @@
 import Navbar from "./Navbar";
 import Home from './Home';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import Nominations from "./Nominations";
 import { useReducer } from "react";
 
@@ -15,10 +15,10 @@ function App() {
       <div className="App">
         <Navbar />
         <Switch>
-          <Route exact path='/the-shoppies/'>
+          <Route exact path='/'>
             <Home nomData={nomData}/>
           </Route>
-          <Route path='/the-shoppies/nominations'>
+          <Route path='/nominations'>
             <Nominations nomData={nomData}/>
           </Route>
         </Switch>
