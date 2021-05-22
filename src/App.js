@@ -15,10 +15,10 @@ function App() {
       <div className="App">
         <Navbar />
         <Switch>
-          <Route exact path='/#/'>
+          <Route exact path='/'>
             <Home nomData={nomData}/>
           </Route>
-          <Route path='/#/nominations'>
+          <Route path='/nominations'>
             <Nominations nomData={nomData}/>
           </Route>
         </Switch>
