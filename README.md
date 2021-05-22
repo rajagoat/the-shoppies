@@ -1,6 +1,12 @@
-# Getting Started with Create React App
+# The Shoppies
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A small project made for the Shopify Challenge in 2020. A website where you can nominate up to 5 movies for "The Shoppies", a fictional awards show.  
+
+## Overview
+
+The website is hosted on Github Pages here: *https://rajagoat.github.io/the-shoppies*
+
+To run and use the project locally, all instructions are given below.
 
 ## Available Scripts
 
