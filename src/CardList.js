@@ -4,7 +4,7 @@ import NA from './img/NA.svg';
 import Pages from "./Pages";
 
 const CardList = ({ movie, setShowModal, setId, page, setPage }) => {
-    const API = `http://www.omdbapi.com/?s=${movie}&apikey=da1f5ac0&type=movie&page=${page}`;
+    const API = `https://www.omdbapi.com/?s=${movie}&apikey=da1f5ac0&type=movie&page=${page}`;
     // console.log(API);
     const { data } = useFetch(API);
     let idArray = [];
