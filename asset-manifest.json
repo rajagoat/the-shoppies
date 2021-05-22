@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/the-shoppies/static/css/main.ba75a22d.chunk.css",
-    "main.js": "/the-shoppies/static/js/main.66d5534d.chunk.js",
-    "main.js.map": "/the-shoppies/static/js/main.66d5534d.chunk.js.map",
+    "main.css": "/the-shoppies/static/css/main.151af418.chunk.css",
+    "main.js": "/the-shoppies/static/js/main.2093eaff.chunk.js",
+    "main.js.map": "/the-shoppies/static/js/main.2093eaff.chunk.js.map",
     "runtime-main.js": "/the-shoppies/static/js/runtime-main.cb123c16.js",
     "runtime-main.js.map": "/the-shoppies/static/js/runtime-main.cb123c16.js.map",
     "static/js/2.86e83613.chunk.js": "/the-shoppies/static/js/2.86e83613.chunk.js",
     "static/js/2.86e83613.chunk.js.map": "/the-shoppies/static/js/2.86e83613.chunk.js.map",
     "index.html": "/the-shoppies/index.html",
-    "static/css/main.ba75a22d.chunk.css.map": "/the-shoppies/static/css/main.ba75a22d.chunk.css.map",
+    "static/css/main.151af418.chunk.css.map": "/the-shoppies/static/css/main.151af418.chunk.css.map",
     "static/js/2.86e83613.chunk.js.LICENSE.txt": "/the-shoppies/static/js/2.86e83613.chunk.js.LICENSE.txt",
-    "static/media/NA.aa2bf3da.svg": "/the-shoppies/static/media/NA.aa2bf3da.svg",
-    "static/media/closed-icon.9e2ec151.svg": "/the-shoppies/static/media/closed-icon.9e2ec151.svg",
-    "static/media/exit-icon.bf0343e8.svg": "/the-shoppies/static/media/exit-icon.bf0343e8.svg",
-    "static/media/movie-icon.07f4ac20.svg": "/the-shoppies/static/media/movie-icon.07f4ac20.svg",
-    "static/media/open-icon.bd14231d.svg": "/the-shoppies/static/media/open-icon.bd14231d.svg",
-    "static/media/index.css": "/the-shoppies/static/media/search-icon.5c7685a7.svg"
+    "static/media/NA.c781556a.svg": "/the-shoppies/static/media/NA.c781556a.svg",
+    "static/media/closed-icon.4d1096c9.svg": "/the-shoppies/static/media/closed-icon.4d1096c9.svg",
+    "static/media/exit-icon.c0fb55a9.svg": "/the-shoppies/static/media/exit-icon.c0fb55a9.svg",
+    "static/media/movie-icon.13311048.svg": "/the-shoppies/static/media/movie-icon.13311048.svg",
+    "static/media/open-icon.5cb9c5b1.svg": "/the-shoppies/static/media/open-icon.5cb9c5b1.svg",
+    "static/media/index.css": "/the-shoppies/static/media/search-icon.6590f6b6.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.cb123c16.js",
     "static/js/2.86e83613.chunk.js",
-    "static/css/main.ba75a22d.chunk.css",
-    "static/js/main.66d5534d.chunk.js"
+    "static/css/main.151af418.chunk.css",
+    "static/js/main.2093eaff.chunk.js"
   ]
 }
