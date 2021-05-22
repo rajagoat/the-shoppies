@@ -40,7 +40,8 @@ const Pages = ({ maxPages, page, setPage, promiseInProgress }) => {
         if (isFirstRender.current) {
             isFirstRender.current = false;
         } else {
-            window.scrollTo(0, 250);
+            const scroll = document.querySelector('.search input');
+            window.scrollTo(0, scroll.offsetTop-20);
         }
     }, [page]);
 

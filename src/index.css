@@ -10,7 +10,7 @@
   grid-template-columns: 6% 44% 25% 25%;
   align-items: center;
   margin: 0 auto;
-  padding: 15px 200px 15px 200px;
+  padding: 15px 200px;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.81) 7.29%, #000000 100%);
   
 }
@@ -392,4 +392,344 @@
 
 .nominations button:hover {
   background-color: #000000dc;
+}
+
+@media screen and (max-width: 1500px) {
+  .home h2 {
+    font-size: 44px;
+  }
+}
+
+@media screen and (max-width: 1460px) {
+  .empty {
+    padding: 240px 40px;
+  }
+}
+
+@media screen and (max-width: 1370px) {
+  .empty {
+    padding: 230px 30px;
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  a.logo.icon img {
+    width: 50px;
+  }
+
+  .navbar {
+    padding: 15px 180px;
+  }
+
+  .navbar h1 {
+    font-size: 44px;
+  }
+
+  .home h2 {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 1270px) {
+  a.logo.icon img {
+    width: 40px;
+  }
+  .navbar {
+    padding: 15px 160px;
+  }
+  .navbar h1 {
+    font-size: 35px;
+  }
+  .navbar .links {
+    font-size: 20px;
+  }
+  .home h2 {
+    font-size: 35px;
+  }
+  .search input {
+    padding: 20px 24px;
+    font-size: 18px;
+    background-size: 20px;
+    background-position: 18px 22px;
+    text-indent: 25px;
+  }
+  .search button {
+    padding: 20px 20px;
+    font-size: 18px;
+  }
+  .card h3 {
+    font-size: 16px;
+  }
+  .card p {
+    font-size: 0.9rem;
+  }
+  .empty {
+    padding: 220px 20px;
+  }
+}
+
+@media screen and (max-width: 1145px) {
+  .empty {
+    padding: 210px 10px;
+  }
+}
+
+@media screen and (max-width: 1090px) {
+  a.logo.icon img {
+    width: 35px;
+  }
+  .navbar {
+    padding: 15px 140px;
+  }
+  .navbar h1 {
+    font-size: 30px;
+  }
+  .navbar .links {
+    font-size: 17px;
+  }
+  .home h2 {
+    font-size: 30px;
+  }
+  .card h3 {
+    font-size: 14px;
+  }
+  .card p {
+    font-size: 0.8rem;
+  }
+  .pages {
+    max-width: 40%;
+  }
+}
+
+@media screen and (max-width: 1040px) {
+  .nominations-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: 15px;
+  }
+  .empty  {
+    padding: 210px 30px;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .search input {
+    padding: 15px 24px;
+    font-size: 17px;
+    background-size: 19px;
+    background-position: 17px 18px;
+    text-indent: 22px;
+  }
+  .search button {
+    padding: 15px 15px;
+    font-size: 17px;
+  }
+  .card-list {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+  }
+  .card {
+    width: fit-content;
+  }
+  .card h3 {
+    font-size: 20px;
+  }
+  .card p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 870px) {
+  a.logo.icon img {
+    width: 30px;
+  }
+  .navbar {
+    padding: 15px 100px;
+  }
+  .navbar .icon {
+    padding-top: 5px;
+  }
+  .navbar h1 {
+    font-size: 26px;
+  }
+  .home h2 {
+    font-size: 26px;
+  }
+  .pages {
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .card {
+    width: 90%;
+  }
+  .card h3 {
+    font-size: 18px;
+  }
+  .card p {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 688px) {
+  a.logo.icon img {
+    width: 25px;
+  }
+  .navbar {
+    padding: 15px 70px;
+  }
+  .navbar .icon {
+    padding-top: 3px;
+  }
+  .navbar h1 {
+    font-size: 22px;
+  }
+  .navbar .links {
+    font-size: 14px;
+  }
+  .home h2 {
+    font-size: 22px;
+  }
+  .card-list {
+    padding: 30px;
+  }
+  .pages {
+    max-width: 55%;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .search input {
+    padding: 13px 0;
+    font-size: 16px;
+    background-size: 16px;
+    background-position: 12px 16px;
+    text-indent: 35px;
+  }
+  .search button {
+    padding: 13px 13px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .empty {
+    padding: 210px 20px;
+  }
+  .pages {
+    max-width: 60%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  a.logo.icon img {
+    margin-right: 10px;
+  }
+  .navbar {
+    padding: 15px 70px;
+  }
+  .navbar .icon {
+    padding-top: 3px;
+  }
+  .navbar h1 {
+    font-size: 22px;
+  }
+  .navbar .links {
+    font-size: 14px;
+  }
+  .home h2 {
+    font-size: 22px;
+  }
+  .card h3 {
+    font-size: 16px; 
+  }
+  h3.title {
+    padding-bottom: 0;
+  }
+  .card p {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 534px) {
+  .empty {
+    padding: 200px 10px;
+  }
+}
+
+@media screen and (max-width: 494px) {
+  .nominations-grid {
+    grid-template-columns: none;
+    grid-template-rows: repeat(5, 1fr);
+    /* row-gap: 15px; */
+  }
+  .empty  {
+    padding: 210px 40px;
+  }
+  .pages {
+    max-width: 75%;
+  }
+}
+
+@media screen and (max-width: 474px) {
+  .navbar {
+    padding: 15px 45px;
+  }
+  .search input {
+    padding: 11px 0;
+    font-size: 14px;
+    background-size: 14px;
+    background-position: 13px 14px;
+    text-indent: 35px;
+  }
+  .search button {
+    padding: 11px 11px;
+    font-size: 14px;
+  }
+  .card-list {
+    grid-template-columns: none;
+    grid-template-rows: repeat(10, 1fr);
+  }
+  .card {
+    width: fit-content;
+  }
+  .card h3 {
+    font-size: 20px;
+  }
+  .card p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 442px) {
+  .navbar {
+    padding: 15px 30px;
+  }
+  .navbar h1 {
+    font-size: 20px;
+  }
+  .navbar .links {
+    font-size: 13px;
+  }
+  .home h2 {
+    margin: 0;
+    font-size: 19px;
+  }
+  .search input {
+    font-size: 12px;
+    background-size: 13px;
+    background-position: 13px 13px;
+    text-indent: 33px;
+  }
+  .search button {
+    font-size: 12px;
+  }
+  .card-list {
+    row-gap: 20px;
+    padding: 10px;
+  }
+  .pages {
+    max-width: 90%;
+  }
 }
